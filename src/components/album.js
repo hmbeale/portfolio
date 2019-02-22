@@ -60,51 +60,51 @@ const styles = theme => ({
 
 const cards = [
   {image: require('../thumbnails/app0.png'), title: 'App Title Zero',
-  href: 'https://github.com/hmbeale/',
+  href: 'https://www.holdenbeale.com/',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
 
   {image: require('../thumbnails/app1.png'), title: 'App Title One',
-  href: 'https://github.com/hmbeale/',
+  href: 'https://www.holdenbeale.com/',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
 
   {image: require('../thumbnails/app2.png'), title: 'App Title Two',
-  href: 'https://github.com/hmbeale/',
+  href: 'https://www.holdenbeale.com/',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
 
   {image: require('../thumbnails/app3.png'), title: 'App Title Three',
-  href: 'https://github.com/hmbeale/',
+  href: 'https://www.holdenbeale.com/',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
 
   {image: require('../thumbnails/app4.png'), title: 'App Title Four',
-  href: 'https://github.com/hmbeale/',
+  href: 'https://www.holdenbeale.com/',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
 
   {image: require('../thumbnails/app5.png'), title: 'App Title Five',
-  href: 'https://github.com/hmbeale/',
+  href: 'https://www.holdenbeale.com/',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
 
   {image: require('../thumbnails/app6.png'), title: 'App Title Six',
-  href: 'https://github.com/hmbeale/',
+  href: 'https://www.holdenbeale.com/',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
 
   {image: require('../thumbnails/app7.png'), title: 'App Title Seven',
-  href: 'https://github.com/hmbeale/',
+  href: 'https://www.holdenbeale.com/',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
 
   {image: require('../thumbnails/app8.png'), title: 'App Title Eight',
-  href: 'https://github.com/hmbeale/',
+  href: 'https://www.holdenbeale.com/',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
 
   {image: require('../thumbnails/app9.png'), title: 'App Title Nine',
-  href: 'https://github.com/hmbeale/',
+  href: 'https://www.holdenbeale.com/',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
 
   {image: require('../thumbnails/app10.png'), title: 'App Title Ten',
-  href: 'https://github.com/hmbeale/',
+  href: 'https://www.holdenbeale.com/',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
 
   {image: require('../thumbnails/app11.png'), title: 'App Title Eleven',
-  href: 'https://github.com/hmbeale/',
+  href: 'https://www.holdenbeale.com/',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
 ];
 
@@ -126,7 +126,7 @@ function Album(props) {
               color="textPrimary"
               gutterBottom
             >
-              Holden Apps
+              Holden Beale
             </Typography>
             <Typography
               variant="h6"
@@ -134,20 +134,19 @@ function Album(props) {
               color="textSecondary"
               paragraph
             >
-              My lorem name ipsum  is dolor Holden sit Beale amet, here consectetur
-              is adipiscing some elit, information sed about do me
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={16} justify="center">
                 <Grid item>
-                  <Button variant="contained" color="primary" href = "https://github.com/hmbeale/">
-                    Contact Us
+                  <Button variant="contained" color="primary" href = "https://www.holdenbeale.com/">
+                    Contact Me
                   </Button>
                 </Grid>
                 <Grid item>
-                  <Button variant="outlined" color="primary" href = "https://github.com/hmbeale/">
+                  <Button variant="outlined" color="primary" href = "https://www.holdenbeale.com/">
                     More Info
                   </Button>
                 </Grid>
@@ -196,7 +195,7 @@ function Album(props) {
           color="textSecondary"
           component="p"
         >
-          footer text footer text footer text!
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit
         </Typography>
       </footer>
       {/* End footer */}
