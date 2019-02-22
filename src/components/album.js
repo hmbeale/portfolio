@@ -158,7 +158,7 @@ function Album(props) {
           {/* End hero unit */}
 
           <Grid container spacing={40}>
-          {cards.app(card => (
+          {cards.map(card => (
             <Grid item key={card} sm={6} md={4} lg={3}>
               <Card className={classes.card}>
                <CardActionArea href = {card.href}>
