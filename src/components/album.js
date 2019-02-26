@@ -60,52 +60,44 @@ const styles = theme => ({
 
 const cards = [
   {image: require('../thumbnails/app0.png'), title: 'Checkout App',
-  href: 'https://www.holdenbeale.com/',
+  href: 'https://github.com/hmbeale/checkout-demo',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
 
   {image: require('../thumbnails/app1.png'), title: 'Dashboard App',
-  href: 'https://www.holdenbeale.com/',
+  href: 'https://github.com/hmbeale/demo-dashboard/',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
 
   {image: require('../thumbnails/app2.png'), title: 'Directory Monitor',
-  href: 'https://www.holdenbeale.com/',
+  href: 'https://github.com/hmbeale/dirMonitor',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
 
   {image: require('../thumbnails/app3.png'), title: 'Library App',
-  href: 'https://www.holdenbeale.com/',
+  href: 'https://github.com/hmbeale/local_lib/',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
 
   {image: require('../thumbnails/app4.png'), title: 'MongoDB Updater',
-  href: 'https://www.holdenbeale.com/',
+  href: 'https://github.com/hmbeale/mongoDBUpdater/',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
 
   {image: require('../thumbnails/app5.png'), title: 'Pricing Webpage',
-  href: 'https://www.holdenbeale.com/',
+  href: 'https://github.com/hmbeale/pricing-demo',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
 
   {image: require('../thumbnails/app6.png'), title: 'Restaurant Review App',
-  href: 'https://www.holdenbeale.com/',
+  href: 'https://github.com/hmbeale/restaurant_reviews/',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
 
   {image: require('../thumbnails/app7.png'), title: 'Sign In Page',
-  href: 'https://www.holdenbeale.com/',
+  href: 'https://github.com/hmbeale/signIn-demo/',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
 
   {image: require('../thumbnails/app8.png'), title: 'Weather App',
-  href: 'https://www.holdenbeale.com/',
+  href: 'https://github.com/hmbeale/weather/',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
 
   {image: require('../thumbnails/app9.png'), title: 'Weather History App',
-  href: 'https://www.holdenbeale.com/',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
-
-  {image: require('../thumbnails/app10.png'), title: 'App Title Ten',
-  href: 'https://www.holdenbeale.com/',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
-
-  {image: require('../thumbnails/app11.png'), title: 'App Title Eleven',
-  href: 'https://www.holdenbeale.com/',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
+  href: 'https://github.com/hmbeale/weather_hist/',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}
 ];
 
 function Album(props) {
