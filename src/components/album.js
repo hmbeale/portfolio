@@ -60,44 +60,44 @@ const styles = theme => ({
 
 const cards = [
   {image: require('../thumbnails/app0.png'), title: 'Checkout App',
-  href: 'https://github.com/hmbeale/checkout-demo',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
+  href: 'https://hmbeale.github.io/checkout-demo/',
+  description: 'A front end React interface for a checkout page.'},
 
   {image: require('../thumbnails/app1.png'), title: 'Dashboard App',
-  href: 'https://github.com/hmbeale/demo-dashboard/',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
+  href: 'https://hmbeale.github.io/demo-dashboard/',
+  description: 'A front end React interface for a dashboard.'},
 
   {image: require('../thumbnails/app2.png'), title: 'Directory Monitor',
   href: 'https://github.com/hmbeale/dirMonitor',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
+  description: 'A Python script which monitors a directory and reacts to changes.'},
 
   {image: require('../thumbnails/app3.png'), title: 'Library App',
   href: 'https://github.com/hmbeale/local_lib/',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
+  description: 'A fullstack application which records books and book data. It uses Express and MongoDB.'},
 
   {image: require('../thumbnails/app4.png'), title: 'MongoDB Updater',
   href: 'https://github.com/hmbeale/mongoDBUpdater/',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
+  description: 'A NodeJS script which adds files to a local MongoDB.'},
 
   {image: require('../thumbnails/app5.png'), title: 'Pricing Webpage',
-  href: 'https://github.com/hmbeale/pricing-demo',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
+  href: 'https://hmbeale.github.io/pricing-demo/',
+  description: 'A front end React interface for a pricing webpage.'},
 
   {image: require('../thumbnails/app6.png'), title: 'Restaurant Review App',
   href: 'https://github.com/hmbeale/restaurant_reviews/',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
+  description: 'A site which combines restaurant data, mapping, and customer reviews.'},
 
   {image: require('../thumbnails/app7.png'), title: 'Sign In Page',
   href: 'https://github.com/hmbeale/signIn-demo/',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
+  description: 'I seem to be broken!'},
 
   {image: require('../thumbnails/app8.png'), title: 'Weather App',
-  href: 'https://github.com/hmbeale/weather/',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
+  href: 'https://hmbeale.github.io/weather/',
+  description: 'An application that uses the Openweathermap api to show the weather.'},
 
   {image: require('../thumbnails/app9.png'), title: 'Weather History App',
   href: 'https://github.com/hmbeale/weather_hist/',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}
+  description: 'An application that uses the NOAA api to return weather history.'}
 ];
 
 function Album(props) {
@@ -138,8 +138,8 @@ function Album(props) {
                   </Button>
                 </Grid>
                 <Grid item>
-                  <Button variant="outlined" color="primary" href = "https://www.holdenbeale.com/">
-                    More Info
+                  <Button variant="outlined" color="primary" href = "https://github.com/hmbeale/">
+                    My Github
                   </Button>
                 </Grid>
               </Grid>
