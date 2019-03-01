@@ -85,7 +85,7 @@ const cards = [
 
   {image: require('../thumbnails/app6.png'), title: 'Restaurant Review App',
   href: 'https://github.com/hmbeale/restaurant_reviews/',
-  description: 'A site which combines restaurant data, mapping, and customer reviews.'},
+  description: 'hmmm might be a hassle to get this online.'},
 
   {image: require('../thumbnails/app7.png'), title: 'Sign In Page',
   href: 'https://github.com/hmbeale/signIn-demo/',
@@ -96,7 +96,7 @@ const cards = [
   description: 'An application that uses the Openweathermap api to show the weather.'},
 
   {image: require('../thumbnails/app9.png'), title: 'Weather History App',
-  href: 'https://github.com/hmbeale/weather_hist/',
+  href: 'https://hmbeale.github.io/weather_hist/',
   description: 'An application that uses the NOAA api to return weather history.'}
 ];
 
