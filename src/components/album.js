@@ -10,17 +10,10 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+import Avatar from '@material-ui/core/Avatar';
 import { withStyles } from "@material-ui/core/styles";
 
 const styles = theme => ({
-  avatar: {
-  margin: 10,
-  },
-  bigAvatar: {
-  margin: 10,
-  width: 60,
-  height: 60,
-  },
   icon: {
     marginRight: theme.spacing.unit * 2
   },
@@ -117,8 +110,7 @@ function Album(props) {
 
       <main>
         {/* Hero unit */}
-        <Avatar alt="Holden Beale Avatar" src="../thumbnails/avatar.png" className={classes.avatar} />
-        <Avatar alt="Holden Beale Avatar" src="../thumbnails/avatar.png" className={classes.bigAvatar} />
+
         <div className={classes.heroUnit}>
           <div className={classes.heroContent}>
             <Typography
@@ -128,7 +120,7 @@ function Album(props) {
               color="textPrimary"
               gutterBottom
             >
-              Holden Beale
+              You made it
             </Typography>
             <Typography
               variant="h6"
@@ -136,8 +128,8 @@ function Album(props) {
               color="textSecondary"
               paragraph
             >
-              I write web applications for fun and for money. Lately I've enjoyed
-              working on the front end of the MERN stack.
+               to my website. Why not sit down and rest awhile? There's plenty
+               to see here and you're welcome to stay as long as you like.
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={16} justify="center">
