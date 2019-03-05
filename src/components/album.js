@@ -83,9 +83,9 @@ const cards = [
   href: 'https://hmbeale.github.io/pricing-demo/',
   description: 'A front end React interface for a pricing webpage.'},
 
-  {image: require('../thumbnails/app6.png'), title: 'Restaurant Review App',
-  href: 'https://github.com/hmbeale/restaurant_reviews/',
-  description: 'hmmm might be a hassle to get this online.'},
+  {image: require('../thumbnails/app6.png'), title: 'Strive',
+  href: 'https://github.com/hmbeale/strive',
+  description: 'A text adventure game for node.'},
 
   {image: require('../thumbnails/app7.png'), title: 'Sign In Page',
   href: 'https://github.com/hmbeale/signIn-demo/',
