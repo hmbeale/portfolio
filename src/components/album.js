@@ -13,6 +13,14 @@ import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 
 const styles = theme => ({
+  avatar: {
+  margin: 10,
+  },
+  bigAvatar: {
+  margin: 10,
+  width: 60,
+  height: 60,
+  },
   icon: {
     marginRight: theme.spacing.unit * 2
   },
@@ -85,7 +93,7 @@ const cards = [
 
   {image: require('../thumbnails/app6.png'), title: 'Strive',
   href: 'https://github.com/hmbeale/strive',
-  description: 'A text adventure game for node.'},
+  description: 'A text adventure game for Node.js.'},
 
   {image: require('../thumbnails/app7.png'), title: 'Sign In Page',
   href: 'https://github.com/hmbeale/signIn-demo/',
@@ -109,6 +117,8 @@ function Album(props) {
 
       <main>
         {/* Hero unit */}
+        <Avatar alt="Holden Beale Avatar" src="../thumbnails/avatar.png" className={classes.avatar} />
+        <Avatar alt="Holden Beale Avatar" src="../thumbnails/avatar.png" className={classes.bigAvatar} />
         <div className={classes.heroUnit}>
           <div className={classes.heroContent}>
             <Typography
@@ -126,9 +136,8 @@ function Album(props) {
               color="textSecondary"
               paragraph
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              I write web applications for fun and for money. Lately I've enjoyed
+              working on the front end of the MERN stack.
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={16} justify="center">
@@ -178,17 +187,7 @@ function Album(props) {
       </main>
       {/* Footer */}
       <footer className={classes.footer}>
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="textSecondary"
-          component="p"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit
-        </Typography>
+
       </footer>
       {/* End footer */}
     </React.Fragment>
