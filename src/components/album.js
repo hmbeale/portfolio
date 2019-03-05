@@ -86,7 +86,7 @@ const cards = [
 
   {image: require('../thumbnails/app6.png'), title: 'Strive',
   href: 'https://github.com/hmbeale/strive',
-  description: 'A text adventure game for Node.js.'},
+  description: 'A text adventure game for Node.js. update the thumbnail!'},
 
   {image: require('../thumbnails/app7.png'), title: 'Sign In Page',
   href: 'https://github.com/hmbeale/signIn-demo/',
