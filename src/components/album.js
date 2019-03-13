@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -12,10 +11,38 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Avatar from '@material-ui/core/Avatar';
 import { withStyles } from "@material-ui/core/styles";
+import * as avatarURL from '../thumbnails/avatar_square.png';
+import {cards} from './cards.js'
+import Modal from '@material-ui/core/Modal';
+
+function rand() {
+  return Math.round(Math.random() * 20) - 10;
+}
+
+function getModalStyle() {
+  const top = 50 + rand();
+  const left = 50 + rand();
+
+  return {
+    top: `${top}%`,
+    left: `${left}%`,
+    transform: `translate(-${top}%, -${left}%)`,
+  };
+}
 
 const styles = theme => ({
-  icon: {
-    marginRight: theme.spacing.unit * 2
+  bigAvatar: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginBottom: theme.spacing.unit * 3,
+    width: 200,
+    height: 200,
+  },
+  subText: {
+    marginTop: 0
+  },
+  nameText: {
+    marginBottom: 0
   },
   heroUnit: {
     backgroundColor: theme.palette.background.paper
@@ -28,6 +55,14 @@ const styles = theme => ({
   heroButtons: {
     marginTop: theme.spacing.unit * 4
   },
+  paper: {
+   position: 'absolute',
+   width: theme.spacing.unit * 50,
+   backgroundColor: theme.palette.background.paper,
+   boxShadow: theme.shadows[5],
+   padding: theme.spacing.unit * 4,
+   outline: 'none',
+ },
   layout: {
     width: "auto",
     marginLeft: theme.spacing.unit * 3,
@@ -59,89 +94,111 @@ const styles = theme => ({
   }
 });
 
-const cards = [
-  {image: require('../thumbnails/app0.png'), title: 'Checkout App',
-  href: 'https://hmbeale.github.io/checkout-demo/',
-  description: 'A front end React interface for a checkout page.'},
 
-  {image: require('../thumbnails/app1.png'), title: 'Dashboard App',
-  href: 'https://hmbeale.github.io/demo-dashboard/',
-  description: 'A front end React interface for a dashboard.'},
 
-  {image: require('../thumbnails/app2.png'), title: 'Directory Monitor',
-  href: 'https://github.com/hmbeale/dirMonitor',
-  description: 'A Python script which monitors a directory and reacts to changes.'},
+class Album extends React.Component {
 
-  {image: require('../thumbnails/app3.png'), title: 'Library App',
-  href: 'https://github.com/hmbeale/local_lib/',
-  description: 'A fullstack application which records books and book data. It uses Express and MongoDB.'},
+  state = {
+      openContact: false,
+      openAbout: false
+    };
 
-  {image: require('../thumbnails/app4.png'), title: 'MongoDB Updater',
-  href: 'https://github.com/hmbeale/mongoDBUpdater/',
-  description: 'A NodeJS script which adds files to a local MongoDB.'},
+    handleContactOpen = () => {
+      this.setState({ openContact: true });
+    };
 
-  {image: require('../thumbnails/app5.png'), title: 'Pricing Webpage',
-  href: 'https://hmbeale.github.io/pricing-demo/',
-  description: 'A front end React interface for a pricing webpage.'},
+    handleContactClose = () => {
+      this.setState({ openContact: false });
+    };
 
-  {image: require('../thumbnails/app6.png'), title: 'Strive',
-  href: 'https://github.com/hmbeale/strive',
-  description: 'A text adventure game for Node.js. update the thumbnail!'},
+    handleAboutOpen = () => {
+      this.setState({ openAbout: true });
+    };
 
-  {image: require('../thumbnails/app7.png'), title: 'Sign In Page',
-  href: 'https://github.com/hmbeale/signIn-demo/',
-  description: 'I seem to be broken!'},
+    handleAboutClose = () => {
+      this.setState({ openAbout: false });
+    };
 
-  {image: require('../thumbnails/app8.png'), title: 'Weather App',
-  href: 'https://hmbeale.github.io/weather/',
-  description: 'An application that uses the Openweathermap api to show the weather.'},
 
-  {image: require('../thumbnails/app9.png'), title: 'Weather History App',
-  href: 'https://hmbeale.github.io/weather_hist/',
-  description: 'An application that uses the NOAA api to return weather history.'}
-];
-
-function Album(props) {
-  const { classes } = props;
-
+render(){
+  const { classes } = this.props;
   return (
     <React.Fragment>
       <CssBaseline />
 
       <main>
         {/* Hero unit */}
-
         <div className={classes.heroUnit}>
           <div className={classes.heroContent}>
+          <Avatar
+              alt="Holden Beale Avatar"
+              src= {avatarURL}
+              className={classes.bigAvatar} />
             <Typography
-              component="h1"
-              variant="h2"
+              component="h2"
+              variant="h3"
               align="center"
               color="textPrimary"
               gutterBottom
+              className={classes.nameText}
             >
-              You made it
+              Holden Beale
             </Typography>
             <Typography
               variant="h6"
               align="center"
               color="textSecondary"
               paragraph
+              className={classes.subText}
             >
-               to my website. Why not sit down and rest awhile? There's plenty
-               to see here and you're welcome to stay as long as you like.
+               javascript geek
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={16} justify="center">
                 <Grid item>
-                  <Button variant="contained" color="primary" href = "https://www.holdenbeale.com/">
-                    Contact Me
-                  </Button>
+                <Button variant="contained" color="primary" onClick={this.handleContactOpen}>Contact Me</Button>
+                    <Modal
+                      aria-labelledby="simple-modal-title"
+                      aria-describedby="simple-modal-description"
+                      open={this.state.openContact}
+                      onClose={this.handleContactClose}
+                    >
+                      <div style={getModalStyle()} className={classes.paper}>
+                        <Typography variant="h6" id="modal-title">
+                          You may email me at
+                        </Typography>
+                        <Typography variant="subtitle1" id="simple-modal-description">
+                          holden.beale@gmail.com
+                        </Typography>
+                      </div>
+                    </Modal>
                 </Grid>
                 <Grid item>
-                  <Button variant="outlined" color="primary" href = "https://github.com/hmbeale/">
-                    My Github
-                  </Button>
+                <Button variant="outlined" color="primary" onClick={this.handleAboutOpen}>About</Button>
+                    <Modal
+                      aria-labelledby="simple-modal-title"
+                      aria-describedby="simple-modal-description"
+                      open={this.state.openAbout}
+                      onClose={this.handleAboutClose}
+                    >
+                      <div style={getModalStyle()} className={classes.paper}>
+                        <Typography variant="h6" id="modal-title">
+                          Thanks for dropping by my site!
+                        </Typography>
+                        <Typography variant="subtitle1" id="simple-modal-description">
+                          I write web applications for fun and for money. Most of
+                          my knowledge and experience is on the front end (I
+                          enjoy working with React especially), but I can wrangle
+                          a little Python and Node as well.
+                        </Typography>
+                        <Typography variant = "subtitle1">
+                        You can check out my GitHub here: 
+                        </Typography>
+                        <Typography variant = "subtitle1">
+                        https://github.com/hmbeale/
+                        </Typography>
+                      </div>
+                    </Modal>
                 </Grid>
               </Grid>
             </div>
@@ -158,7 +215,6 @@ function Album(props) {
                 <CardMedia
                   className={classes.cardMedia}
                   image= {card.image}
-                  image = {card.image}
                   title= {card.title}
                 />
                 <CardContent className={classes.cardContent}>
@@ -184,6 +240,10 @@ function Album(props) {
       {/* End footer */}
     </React.Fragment>
   );
+}
+
+
+
 }
 
 Album.propTypes = {
